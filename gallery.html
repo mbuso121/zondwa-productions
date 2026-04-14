@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Zondwa Productions</title>
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+    <h2>ZONDWA</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#photos">Photos</a>
+        <a href="#videos">Videos</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Our Gallery</h1>
+    <p>Moments. Stories. Impact.</p>
+</section>
+
+<!-- PHOTOS -->
+<section id="photos" class="gallery-section">
+    <h2>Photos</h2>
+    <div class="grid">
+        <img src="images/work1.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/work2.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/work3.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/work4.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/work5.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/work6.jpeg" onclick="openLightbox(this.src)">
+    </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="gallery-section">
+    <h2>Videos</h2>
+    <div class="grid">
+        <video src="videos/work1.mov" controls></video>
+        <video src="videos/work2.mov" controls></video>
+        <video src="videos/work3.mp4" controls></video>
+        <video src="videos/work4.mov" controls></video>
+
+    </div>
+</section>
+
+<!-- BOOK CTA -->
+<section class="cta">
+    <h2>Want Something Like This?</h2>
+    <p>Let’s create something powerful together.</p>
+    <a href="https://wa.me/27835109674" target="_blank">Book Now</a>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+/* NAV */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    color: gold;
+}
+
+/* SECTION */
+.gallery-section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* FIXED IMAGE SIZE */
+.grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,215,0,0.6);
+}
+
+/* VIDEOS SAME SIZE */
+.grid video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* LIGHTBOX */
+#lightbox {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .grid img, .grid video {
+        height: 180px;
+    }
+}
